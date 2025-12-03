@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>João Pedro Carvalho | Analista e Desenvolvedor de Software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio de João Pedro Carvalho - Analista e Desenvolvedor de Software. Projetos, habilidades, experiência e contatos." />
+
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-alt: #0b1220;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.1);
+      --border: #1f2933;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+      --radius-lg: 18px;
+      --radius-full: 999px;
+      --spacing: 1.5rem;
+      --transition: 180ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    /* HEADER / NAV */
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-initials {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-full);
+      background: radial-gradient(circle at 30% 0, #4ade80, #16a34a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #020617;
+      box-shadow: 0 12px 35px rgba(34, 197, 94, 0.6);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .logo-text span:first-child {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    .logo-text span:last-child {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      color: var(--muted);
+      border: 1px solid transparent;
+      transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+    }
+
+    nav a:hover {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.25);
+      color: #f9fafb;
+      transform: translateY(-1px);
+    }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.6fr);
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+      align-items: center;
+    }
+
+    .hero-main h1 {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero-main h1 span {
+      background: linear-gradient(120deg, #22c55e, #a3e635);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      max-width: 34rem;
+      font-size: 0.96rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .chip {
+      font-size: 0.8rem;
+      padding: 0.32rem 0.8rem;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(10px);
+    }
+
+    .chip.chip-accent {
+      border-color: rgba(34, 197, 94, 0.5);
+      background: var(--accent-soft);
+      color: #bbf7d0;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      border-radius: var(--radius-full);
+      padding: 0.7rem 1.3rem;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition), color var(--transition);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #22c55e, #4ade80);
+      border-color: #22c55e;
+      color: #022c22;
+      font-weight: 600;
+      box-shadow: 0 14px 40px rgba(34, 197, 94, 0.5);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 50px rgba(34, 197, 94, 0.7);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(148, 163, 184, 0.8);
+      color: #e5e7eb;
+    }
+
+    .hero-side {
+      background: linear-gradient(145deg, #020617, #020617);
+      border-radius: 999px;
+      border: 1px solid rgba(51, 65, 85, 0.85);
+      padding: 1.2rem 1.4rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-side::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.28), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-info {
+      position: relative;
+      display: grid;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .hero-role {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-location {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--muted);
+    }
+
+    .hero-contact-list {
+      margin-top: 0.8rem;
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .hero-contact-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.4rem 0.2rem;
+      border-radius: 10px;
+    }
+
+    .hero-contact-item span:first-child {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-contact-item span:last-child {
+      font-size: 0.86rem;
+    }
+
+    .pill {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* SECTION BASE */
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title span {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .card-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(30, 64, 175, 0.55);
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.85);
+      padding: 1.25rem 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.05), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .card > * {
+      position: relative;
+    }
+
+    /* SOBRE */
+
+    .about-text {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .about-text p + p {
+      margin-top: 0.75rem;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .skills-group-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .badge {
+      font-size: 0.78rem;
+      padding: 0.26rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(51, 65, 85, 0.95);
+      color: #e5e7eb;
+    }
+
+    .badge-soft {
+      background: rgba(15, 23, 42, 0.9);
+      border-style: dashed;
+      border-color: rgba(148, 163, 184, 0.7);
+      color: var(--muted);
+    }
+
+    /* EXPERIENCE & EDUCATION */
+
+    .timeline {
+      display: grid;
+      gap: 0.9rem;
+      font-size: 0.9rem;
+    }
+
+    .timeline-item {
+      display: grid;
+      gap: 0.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(31, 41, 55, 0.7);
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: baseline;
+    }
+
+    .timeline-role {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .timeline-company {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .timeline-period {
+      font-size: 0.8rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .timeline-list {
+      margin-left: 0.9rem;
+      color: var(--muted);
+    }
+
+    .timeline-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .project-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-stack {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr);
+      gap: 1.4rem;
+      align-items: start;
+    }
+
+    .contact-list {
+      font-size: 0.9rem;
+      display: grid;
+      gap: 0.4rem;
+      color: var(--muted);
+    }
+
+    .contact-list strong {
+      color: #e5e7eb;
+    }
+
+    .contact-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+
+    .contact-card {
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 1rem 1.1rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(31, 41, 55, 0.75);
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    /* RESPONSIVO */
+
+    @media (max-width: 880px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding-inline: 1.1rem;
+      }
+
+      .hero-side {
+        border-radius: 24px;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header>
+      <div class="logo-mark">
+        <div class="logo-initials">JP</div>
+        <div class="logo-text">
+          <span>Portfólio</span>
+          <span>João Pedro Carvalho</span>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#skills">Skills</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-main">
+        <h1>
+          João Pedro Carvalho<br />
+          <span>Analista & Desenvolvedor de Software</span>
+        </h1>
+
+        <p class="hero-sub">
+          Estudante de <strong>Sistemas de Informação</strong>, com foco em desenvolvimento de software
+          e experiência prática em <strong>Java, JavaScript, Python, C#, SQL, Flutter e desenvolvimento web</strong>.
+          Atuo com criação de APIs, interfaces gráficas, aplicativos mobile e web, sempre buscando transformar
+          tecnologia em resultado real.
+        </p>
+
+        <div class="hero-tags">
+          <span class="chip chip-accent">Desenvolvimento de Software</span>
+          <span class="chip">Mobile com Flutter</span>
+          <span class="chip">APIs & Back-end</span>
+          <span class="chip">Banco de Dados SQL/NoSQL</span>
+          <span class="chip">Cloud & Segurança</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#contato" class="btn btn-primary">
+            Falar comigo
+            <span>↗</span>
+          </a>
+          <!-- Se quiser, troque o link abaixo pelo endereço real do seu currículo em PDF no GitHub -->
+          <a href="#" class="btn btn-ghost">
+            Ver currículo (PDF)
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="hero-info">
+          <div>
+            <div class="hero-label">Disponível para oportunidades</div>
+            <div class="hero-role">Analista e Desenvolvedor de Software</div>
+            <div class="hero-location">
+              <span>📍</span>
+              <span>São Paulo, SP – Brasil</span>
+            </div>
+          </div>
+
+          <div class="hero-contact-list">
+            <div class="hero-contact-item">
+              <span>Telefone</span>
+              <span>
+                <a href="https://wa.me/5511972498647" target="_blank" rel="noopener">
+                  (11) 97249-8647
+                </a>
+              </span>
+            </div>
+            <div class="hero-contact-item">
+              <span>E-mail</span>
+              <span>
+                <a href="mailto:jpcbernardes@hotmail.com">
+                  jpcbernardes@hotmail.com
+                </a>
+              </span>
+            </div>
+            <div class="hero-contact-item">
+              <span>LinkedIn</span>
+              <span>
+                <!-- Substitua # pelo link do seu LinkedIn -->
+                <a href="#" target="_blank" rel="noopener">
+                  linkedin.com/in/seu-perfil
+                </a>
+              </span>
+            </div>
+            <div class="hero-contact-item">
+              <span>GitHub</span>
+              <span>
+                <!-- Substitua # pelo link do seu GitHub -->
+                <a href="#" target="_blank" rel="noopener">
+                  github.com/seu-usuario
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <div style="margin-top: 0.8rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="pill">📚 Sistemas de Informação (UMC)</span>
+            <span class="pill">🧠 Visão analítica</span>
+            <span class="pill">🤝 Trabalho em equipe</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span></span> Sobre mim
+        </h2>
+        <p class="section-subtitle">
+          Quem eu sou, como penso e no que posso ajudar sua empresa.
+        </p>
+      </div>
+
+      <div class="card card-grid">
+        <div class="about-text">
+          <p>
+            Sou <strong>João Pedro Carvalho</strong>, estudante de <strong>Sistemas de Informação</strong> na
+            Universidade de Mogi das Cruzes, apaixonado por tecnologia e desenvolvimento de software.
+            Tenho experiência com <strong>Java, JavaScript, Python, C#, SQL, Flutter e desenvolvimento web</strong>,
+            atuando em projetos que envolvem APIs, interfaces gráficas, aplicativos móveis e soluções web.
+          </p>
+          <p>
+            Participei de projetos acadêmicos e pessoais que me ajudaram a desenvolver tanto a parte técnica quanto
+            habilidades como <strong>visão analítica, lógica de programação, trabalho em equipe e comunicação
+            efetiva</strong>. Também atuei como estagiário de TI na Prefeitura de Santa Isabel, lidando com
+            <strong>infraestrutura, suporte, dados e organização de documentos digitais</strong>.
+          </p>
+          <p>
+            Busco oportunidades para atuar como <strong>Desenvolvedor Júnior / Analista de Software</strong>,
+            contribuindo com código de qualidade, aprendizado constante e foco em resultado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span></span> Skills
+        </h2>
+        <p class="section-subtitle">
+          Tecnologias e competências que uso no dia a dia.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="skills-grid">
+          <div>
+            <div class="skills-group-title">Linguagens & Frameworks</div>
+            <div class="skill-badges">
+              <span class="badge">Java</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">Python</span>
+              <span class="badge">C#</span>
+              <span class="badge">Dart</span>
+              <span class="badge">Flutter</span>
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">APIs REST</span>
+              <span class="badge">Tkinter (GUI)</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="skills-group-title">Banco de Dados & Cloud</div>
+            <div class="skill-badges">
+              <span class="badge">SQL</span>
+              <span class="badge">NoSQL</span>
+              <span class="badge">Modelagem de dados</span>
+              <span class="badge">Computação em Nuvem</span>
+              <span class="badge">Segurança da Informação</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="skills-group-title">Dev & Ferramentas</div>
+            <div class="skill-badges">
+              <span class="badge">Git & GitHub</span>
+              <span class="badge">Automação com IA</span>
+              <span class="badge">IoT (Internet das Coisas)</span>
+              <span class="badge">Power BI</span>
+              <span class="badge">Lógica de Programação</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="skills-group-title">Soft Skills</div>
+            <div class="skill-badges">
+              <span class="badge badge-soft">Trabalho em equipe</span>
+              <span class="badge badge-soft">Comunicação efetiva</span>
+              <span class="badge badge-soft">Visão analítica</span>
+              <span class="badge badge-soft">Organização</span>
+              <span class="badge badge-soft">Resiliência</span>
+              <span class="badge badge-soft">Aprendizado contínuo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span></span> Experiência
+        </h2>
+        <p class="section-subtitle">
+          Atuação profissional e o que aprendi em cada lugar.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">Estágio em TI</div>
+                <div class="timeline-company">Prefeitura de Santa Isabel</div>
+              </div>
+              <div class="timeline-period">2025 - Presente</div>
+            </div>
+            <ul class="timeline-list">
+              <li>Otimização da infraestrutura e resiliência dos dados.</li>
+              <li>Gestão de suporte técnico (N1 e N2), garantindo disponibilidade de redes e sistemas.</li>
+              <li>Migração e organização estratégica de documentos digitais.</li>
+              <li>Atuação em segurança, acesso e organização de bases de dados.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">Inspetor de Qualidade</div>
+                <div class="timeline-company">PDC - Gestamp</div>
+              </div>
+              <div class="timeline-period">2022 - 2024</div>
+            </div>
+            <ul class="timeline-list">
+              <li>Inspeção de componentes automotivos.</li>
+              <li>Elaboração de relatórios e documentação em Excel.</li>
+              <li>Participação em reuniões diárias com a equipe de qualidade.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">Jovem Aprendiz</div>
+                <div class="timeline-company">Sertranding</div>
+              </div>
+              <div class="timeline-period">2019 - 2020</div>
+            </div>
+            <ul class="timeline-list">
+              <li>Suporte a processos logísticos e gestão de embarques.</li>
+              <li>Criação de numerários e organização documental.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCAÇÃO & CERTIFICAÇÕES -->
+    <section id="educacao">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span></span> Formação
+        </h2>
+        <p class="section-subtitle">
+          Base acadêmica que apoia minha atuação na tecnologia.
+        </p>
+      </div>
+
+      <div class="card card-grid">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">Sistemas de Informação</div>
+                <div class="timeline-company">Universidade de Mogi das Cruzes</div>
+              </div>
+              <div class="timeline-period">2022 - 2026</div>
+            </div>
+            <p class="section-subtitle">
+              Foco em desenvolvimento de software, banco de dados, infraestrutura, segurança e soluções corporativas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span></span> Projetos em destaque
+        </h2>
+        <p class="section-subtitle">
+          Alguns dos projetos que representam meu jeito de desenvolver e resolver problemas.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="projects-grid">
+          <article>
+            <div class="project-name">App de Controle de Estoque Doméstico</div>
+            <div class="project-stack">Flutter · Dart · Gerenciamento de Estado · Persistência de Dados</div>
+            <p class="project-desc">
+              Aplicativo mobile desenvolvido em equipe para auxiliar pessoas a controlarem o estoque da casa,
+              cadastrando produtos, quantidades, datas de validade e alertas de reposição, com foco em usabilidade
+              e organização.
+            </p>
+            <div class="project-links">
+              <!-- Coloque o link do repositório se o projeto estiver público -->
+              <span class="badge badge-soft">Em desenvolvimento</span>
+            </div>
+          </article>
+
+          <article>
+            <div class="project-name">Sistema de Controle de Saldo & Despesas Mensais</div>
+            <div class="project-stack">Python · Tkinter · Arquivos · Gráficos</div>
+            <p class="project-desc">
+              Sistema desktop com interface gráfica para gerenciamento de saldo bancário, registro de entradas
+              e saídas, armazenamento em arquivos e exibição de gráficos para análise financeira mensal.
+            </p>
+            <div class="project-links">
+              <span class="badge badge-soft">Projeto acadêmico</span>
+            </div>
+          </article>
+
+          <article>
+            <div class="project-name">Sistema de Reservas e Pacotes de Viagem</div>
+            <div class="project-stack">Python · Tkinter · Relatórios · Integração</div>
+            <p class="project-desc">
+              Aplicação com cadastro de hotéis e passagens, geração de relatórios, gráficos de faturamento e
+              estrutura de chatbot para atendimento básico ao usuário.
+            </p>
+            <div class="project-links">
+              <span class="badge badge-soft">Foco em usabilidade e lógica</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span></span> Contato
+        </h2>
+        <p class="section-subtitle">
+          Vamos conversar sobre como posso agregar ao seu time ou projeto.
+        </p>
+      </div>
+
+      <div class="card contact-grid">
+        <div>
+          <div class="contact-list">
+            <div><strong>Telefone / WhatsApp:</strong> <a href="https://wa.me/5511972498647" target="_blank" rel="noopener">(11) 97249-8647</a></div>
+            <div><strong>E-mail:</strong> <a href="mailto:jpcbernardes@hotmail.com">jpcbernardes@hotmail.com</a></div>
+            <div><strong>Cidade:</strong> São Paulo, SP – Brasil</div>
+            <div><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">linkedin.com/in/seu-perfil</a></div>
+            <div><strong>GitHub:</strong> <a href="#" target="_blank" rel="noopener">github.com/seu-usuario</a></div>
+          </div>
+
+          <p class="contact-note">
+            Sinta-se à vontade para entrar em contato para oportunidades de estágio, júnior ou projetos
+            de desenvolvimento de software. Estou sempre aberto a aprender, colaborar e construir soluções novas.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <strong>Mensagem direta para recrutadores</strong>
+          <p style="margin-top: 0.5rem;">
+            “Olá! Sou o João, estudante de Sistemas de Informação e desenvolvedor em início de carreira,
+            com experiência prática em projetos reais e forte interesse em atuar na área de desenvolvimento
+            de software. Caso tenha interesse em bater um papo ou agendar uma conversa, será um prazer falar com você.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> João Pedro Carvalho. Todos os direitos reservados.</span>
+      <span>Construído com HTML & CSS, hospedado no GitHub Pages.</span>
+    </footer>
+  </div>
+
+  <script>
+    // Atualiza ano automaticamente no rodapé
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll suave para navegação
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        const targetId = this.getAttribute("href");
+        if (targetId.length > 1) {
+          e.preventDefault();
+          const target = document.querySelector(targetId);
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 20,
+              behavior: "smooth"
+            });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
